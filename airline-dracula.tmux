@@ -35,7 +35,7 @@ main() {
   tmux set-window-option -g window-status-format ' #I #(basename ${PWD}) '
   tmux set-window-option -g window-status-style "fg=${yellow},bg=${dark_gray}"
   tmux set-window-option -g window-status-current-format \
-    "${right_sep}#[fg=${black}] #I ${right_alt_sep} #W #[fg=${dark_gray},reverse]${right_sep}"
+    "${right_sep}#[fg=${black}] #I ${right_alt_sep} #(basename ${PWD}) #[fg=${dark_gray},reverse]${right_sep}"
   tmux set-window-option -g window-status-current-style "fg=${dark_gray},bg=${light_purple}"
 }
 
